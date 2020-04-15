@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <form @submit.prevent="searchShow">
-      <input class="input" type="text" v-model="search" placeholder="Seach here..." />
+      <input class="input" type="text" v-model="search" placeholder="Search here ..."/>
     </form>
   </div>
 </template>
@@ -12,6 +12,8 @@ import { mapActions, mapState, mapMutations } from "vuex";
 
 export default {
   name: 'HelloWorld',
+  components:{
+  },
   data() {
     return {
       search: '',
@@ -43,6 +45,7 @@ export default {
   .page{
     background-color: #f5f5f5;
     padding: 1rem 0;
+    width: 95vw;
   }
 
   .input{

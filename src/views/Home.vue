@@ -3,7 +3,7 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <ul>
       <li v-for="(show, index) in searchedList" :key="index">
-          <Card/>
+          <Card v-bind:posterUrl="show.Poster"/>
       </li>
     </ul>
   </div>

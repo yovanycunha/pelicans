@@ -1,14 +1,14 @@
 import styled from 'vue-styled-components';
 
-const CardButton = styled.button`
-    border: none;
+const btnProps = { primary: Boolean }
+
+const CardButton = styled('button', btnProps)`
     width: 33.3%;
     height: 4rem;
     display: inline-block;
-    border-right: .1rem solid white;
-    :last-child{
-        border-right: none;
-    }
+    text-decoration: none;
+    border-color: ${props => props.primary ? "white" : "transparent"}
+
 `;
 
-export {CardButton}
+export default CardButton;
