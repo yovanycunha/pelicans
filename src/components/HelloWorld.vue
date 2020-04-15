@@ -1,32 +1,55 @@
 <template>
-  <div class="hello">
+  <div class="page">
     <form @submit.prevent="searchShow">
-      <input type="text" v-model="search" placeholder="Seach here..." />
+      <input class="input" type="text" v-model="search" placeholder="Seach here..." />
     </form>
   </div>
 </template>
 
 <script>
-import ApiService from '@/services/ApiService';
+import {getData} from '@/services/ApiService';
+import { mapActions, mapState, mapMutations } from "vuex";
+
 export default {
   name: 'HelloWorld',
   data() {
     return {
-      search: ''
+      search: '',
     }
   },
+  computed: {
+    ...mapState([
+      'searchedList'
+    ])
+  },
   methods: {
+    ...mapMutations([
+      'SEARCH_LIST'
+    ]),
+    ...mapActions([
+      'addToSearchedList'
+    ]),
     searchShow: function(){
-      ApiService.fetchShowsGeneric(this.search)
+        getData(this.search)
+          .then((result) => {
+            this.addToSearchedList(result)
+          })
     },
-    get: function () {
-      ApiService.fetchShowsGeneric()
-    }
   },
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
+  .page{
+    background-color: #f5f5f5;
+    padding: 1rem 0;
+  }
+
+  .input{
+    padding-left: 1rem;
+    border: none;
+    height: 3rem;
+    margin: auto;
+  }
 
 </style>

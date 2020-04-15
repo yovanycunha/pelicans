@@ -1,11 +1,13 @@
 import axios from 'axios';
 
-export default {
-    fetchShowsGeneric(name) {
-        return axios.get('&s=' + name)
-        .then(response => {
-            console.log(response);
-            return response
+
+async function getData(name) {
+    return await axios
+        .get('&s=' + name)
+        .then((result) => {
+            return result.data.Search
         })
     }
-}
+
+
+export {getData};
