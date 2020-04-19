@@ -1,13 +1,22 @@
-import styled from 'vue-styled-components';
+import styled, {keyframes} from 'vue-styled-components';
 
-const btnProps = { primary: Boolean }
+const btnProps = { primary: Boolean };
 
 const CardButton = styled('button', btnProps)`
-    width: 33.3%;
+    max-width: 33.3%;
     height: 4rem;
-    display: inline-block;
     text-decoration: none;
-    border-color: ${props => props.primary ? "white" : "transparent"}
+    border: solid .4rem;
+    border-radius: 2rem;
+    border-color: ${props => props.primary ? "white" : "transparent"};
+
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+
+    margin: 2rem;
 
 `;
 
