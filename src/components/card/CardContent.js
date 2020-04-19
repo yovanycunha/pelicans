@@ -5,7 +5,7 @@ const cardContentProps = {posterUrl: String};
 const CardContent = styled('div', cardContentProps)`
     border: none;
     width: 90%;
-    height: 95%;
+    height: 90%;
     margin:auto;
     position: relative;
     background-size: cover;

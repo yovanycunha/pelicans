@@ -37,7 +37,6 @@ export default {
 .page {
   background-color: #f5f5f5;
   padding: 1rem 0;
-  width: 100vw;
 }
 
 .input {

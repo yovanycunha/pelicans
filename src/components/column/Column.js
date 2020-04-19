@@ -17,7 +17,7 @@ const Column = styled('div', columnProps)`
     padding: .25rem;
     box-sizing: border-box;
     width: 100%;
-    height: 45rem;
+    height: 50rem;
     margin-bottom: .3rem;
 
     /*
