@@ -19,7 +19,6 @@ export default new Vuex.Store({
     SEARCH_LIST: (state, searchList) => {
       state.searchedList = searchList
     }
-    
   },
   actions: {
     addToWatched: (context, show) => {
@@ -30,9 +29,7 @@ export default new Vuex.Store({
     },
     addToSearchedList: (context, list) => {
       context.commit('SEARCH_LIST', list)
-    }
-    
-    
+    },
   },
   modules: {
   }
