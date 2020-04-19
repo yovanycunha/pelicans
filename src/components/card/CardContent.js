@@ -4,8 +4,9 @@ const cardContentProps = {posterUrl: String};
 
 const CardContent = styled('div', cardContentProps)`
     border: none;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 95%;
+    margin:auto;
     position: relative;
     background-size: cover;
     background-image: url(${props => props.posterUrl});

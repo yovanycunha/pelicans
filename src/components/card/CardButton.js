@@ -4,7 +4,7 @@ const btnProps = { primary: Boolean };
 
 const CardButton = styled('button', btnProps)`
     max-width: 33.3%;
-    height: 4rem;
+    height: 10%;
     text-decoration: none;
     border: solid .4rem;
     border-radius: 2rem;

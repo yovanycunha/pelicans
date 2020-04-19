@@ -1,9 +1,9 @@
 import styled from 'vue-styled-components';
 
 const columnProps = {
-    desktop: String,
-    tablet: String,
-    phone: String
+    desktop: Number,
+    tablet: Number,
+    phone: Number
 }
 
 const getWidth = (value) => {
@@ -17,24 +17,24 @@ const Column = styled('div', columnProps)`
     padding: .25rem;
     box-sizing: border-box;
     width: 100%;
+    height: 45rem;
+    margin-bottom: .3rem;
 
     /*
      Atentar para a ordem das medias pois elas importam
     */
-    @media only screen and (max-width: 870px) {
+    @media only screen and (max-width: 768px) {
+        height: 37rem;
         ${props => props.phone && getWidth(props.phone)};
     }
     
-    @media only screen and (min-width: 870px) {
+    @media only screen and (min-width: 768px) {
         ${props => props.tablet && getWidth(props.tablet)};
     }
     
-    @media only screen and (min-width: 1150px) {
+    @media only screen and (min-width: 1024px) {
         ${props => props.desktop && getWidth(props.desktop)};
     }
-
-    border: .2rem solid black;
-    background-color: red;
 `;
 
 export default Column;

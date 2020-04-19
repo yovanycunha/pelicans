@@ -6,6 +6,8 @@ const CardTitle = styled.h4`
     max-height: 3rem;
     max-width: 100%;
     background-color: inherit;
+    height: 3%;
+    margin: .2rem;
 
     white-space:nowrap;
     overflow: hidden;

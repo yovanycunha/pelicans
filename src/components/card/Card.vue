@@ -27,14 +27,10 @@ export default {
 <style>
 .card {
   display: inline-block;
-  margin: 0.5rem;
-  width: 25rem;
-  height: 42rem;
+  width:100%;
+  height: inherit;
   position: relative;
   transition: all 1.5s;
 }
 
-.title {
-  content: 'lol'
-}
 </style>
