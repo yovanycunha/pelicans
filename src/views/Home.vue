@@ -1,13 +1,13 @@
 <template>
   <div class="home">
-    <HelloWorld/>
+    <Search/>
     <Container/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Search from '@/components/search/Search.vue';
 import Card from "@/components/card/Card.vue";
 import Container from "@/components/container/Container.vue";
 
@@ -20,7 +20,7 @@ export default {
     ...mapState(["searchedList"])
   },
   components: {
-    HelloWorld,
+    Search,
     Card,
     Container
   }

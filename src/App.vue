@@ -7,6 +7,7 @@
 <style>
   html {
     font-size: 62.5%;
+    background-color: #ecefff;
   }
   #app {
     font-family: Lato, sans-serif;
