@@ -2,18 +2,18 @@
   <div class="input-field">
     <form @submit.prevent="searchShow">
       <Check class="check" type="checkbox" id="search-toggle"/>
-      <Input class="inpt" placeholder="Search here ..." v-model="search"/>
       <label for="search-toggle">
         <span >
           <font-awesome-icon class="icn" icon="search"  />
         </span>
       </label>
+      <Input class="inpt" placeholder="Search here ..." v-model="search"/>
     </form>
   </div>
 </template>
 
 <script>
-import {Input} from './Search';
+import { Input } from './Search';
 import { Check } from "./Collapse";
 import { getData } from "@/services/ApiService";
 import { mapActions, mapState, mapMutations } from "vuex";
@@ -55,7 +55,7 @@ export default {
 .icn {
   font-size: 1.7rem;
   color: #fafafa;
-  padding-left: 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 
 .check {

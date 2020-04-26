@@ -1,12 +1,12 @@
 <template>
   <div class="card">
-    <CardContent class="content" v-bind:posterUrl="posterUrl" />
+    <FrontCard class="card-front" v-bind:posterUrl="posterUrl" />
     <CardTitle>{{title}}</CardTitle>
   </div>
 </template>
 
 <script>
-import CardContent from "./CardContent";
+import FrontCard from "./CardContent";
 import CardButton from "./CardButton";
 import {CardTitle} from './CardTitle';
 
@@ -17,7 +17,7 @@ export default {
     title: String
   },
   components: {
-    CardContent,
+    FrontCard,
     CardButton,
     CardTitle
   }
@@ -30,7 +30,11 @@ export default {
   width:100%;
   height: inherit;
   position: relative;
-  transition: all 1.5s;
 }
+/* 
+.card:hover .card-front{
+  transform: rotateY(180deg);
+  opacity: 0;
+} */
 
 </style>

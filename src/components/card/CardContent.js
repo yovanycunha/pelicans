@@ -10,7 +10,7 @@ const CardContent = styled('div', cardContentProps)`
     position: relative;
     background-size: cover;
     background-image: url(${props => props.posterUrl});
-    transition: all .4s;
+    transition: all 1.5s;
     `;
 
 export default CardContent;
