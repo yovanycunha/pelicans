@@ -4,10 +4,10 @@ const CardTitle = styled.h4`
     font-size: 1.7rem;
     font-weight: 500;
     max-height: 3rem;
-    max-width: 100%;
+    max-width: 90%;
     background-color: inherit;
     height: 10%;
-    margin: .2rem;
+    margin: auto;
     padding-top: 0.2rem;
 
     white-space:nowrap;

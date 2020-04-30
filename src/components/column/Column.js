@@ -14,17 +14,15 @@ const getWidth = (value) => {
 
 const Column = styled('div', columnProps)`
     float: left;
-    padding: .25rem;
     box-sizing: border-box;
     width: 100%;
     height: 50rem;
-    margin-bottom: .3rem;
+    margin-bottom: 4rem;
 
     /*
      Atentar para a ordem das medias pois elas importam
     */
     @media only screen and (max-width: 768px) {
-        height: 37rem;
         ${props => props.phone && getWidth(props.phone)};
     }
     

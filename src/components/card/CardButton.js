@@ -3,20 +3,16 @@ import styled, {keyframes} from 'vue-styled-components';
 const btnProps = { primary: Boolean };
 
 const CardButton = styled('button', btnProps)`
-    max-width: 33.3%;
-    height: 10%;
     text-decoration: none;
-    border: solid .4rem;
+    border: none;
     border-radius: 2rem;
-    border-color: ${props => props.primary ? "white" : "transparent"};
-
     display: inline-block;
-    position: relative;
-    top: 50%;
-    left: 0%;
-    transform: translate(0%, -50%);
+    
+    margin-right: 2.5%;
 
-    margin: 2rem;
+    :last-child {
+        margin-left:2.5%;
+    }
 
 `;
 
