@@ -12,7 +12,7 @@ library.add(faSpinner, faSearch, faReply, faHeart)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false;
-axios.defaults.baseURL = 'https://www.omdbapi.com/?&apikey=ebcafd7d&Content-Type=application/json';
+axios.defaults.baseURL = 'https://www.omdbapi.com/?&apikey=ebcafd7d&plot=full&Content-Type=application/json';
 
 new Vue({
   router,

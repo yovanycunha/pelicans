@@ -5,10 +5,10 @@ const btnProps = { primary: Boolean };
 const CardButton = styled('button', btnProps)`
     text-decoration: none;
     border: none;
-    border-radius: 2rem;
+    border-radius: 50%;
     display: inline-block;
-    
     margin-right: 2.5%;
+    z-index: 2;
 
     :last-child {
         margin-left:2.5%;

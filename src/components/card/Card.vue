@@ -1,22 +1,8 @@
 <template>
   <div class="card">
     <CardTitle>{{title}}</CardTitle>
-    <!-- <FrontCard class="card-front" v-bind:posterUrl="posterUrl" /> -->
-    <CardBack v-bind:posterUrl="posterUrl">
-      <ul>
-        <li>
-          Plot: After saving Xandar from Ronan's wrath, the Guardians are now recognized as heroes. Now the team must help their leader Star Lord (Chris Pratt) uncover the truth behind his true heritage. Along the way, old foes turn to allies and betrayal is blooming. And the Guardians find that they are up against a devastating new menace who is out to rule the galaxy.
-        </li>
-        <li>
-          Ano: 1990 
-        </li>
-        <li>
-          Gênero: Comédia
-        </li>
-        <li>
-          Diretor: James Gun
-        </li>
-      </ul>
+    <FrontCard class="card-front" v-bind:posterUrl="posterUrl" />
+    <CardBack class="card-back" v-bind:posterUrl="posterUrl">
       <div class="btn-bar">
         <ul>
           <li>
@@ -41,7 +27,11 @@ export default {
   name: "Card",
   props: {
     posterUrl: String,
-    title: String
+    title: String,
+    plot: String,
+    genre: String,
+    year: String,
+    director: String
   },
   components: {
     FrontCard,
@@ -61,7 +51,7 @@ export default {
 }
 
 .btn-bar {
-  position: absolute;
+  position: relative;
   bottom: 0;
   height: 10%;
   width: 100%;
@@ -72,17 +62,16 @@ export default {
 }
 
 .btn {
-  width: 45%;
-  
+  width: 7rem;
+  height: 7rem;
 }
-/* 
-.card:hover .card-front{
-  transform: rotateY(180deg);
-  opacity: 0;
-} */
-/* 
+
 .card:hover .card-front {
   filter: blur(.5rem);
-} */
+}
+
+.card:hover .card-back {
+  opacity: 1;
+}
 
 </style>

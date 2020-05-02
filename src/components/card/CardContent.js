@@ -1,16 +1,12 @@
 import styled from 'vue-styled-components';
+import {StyledContent} from './Content';
 
 const cardContentProps = {posterUrl: String};
 
-const CardContent = styled('div', cardContentProps)`
-    border: none;
-    width: 90%;
-    height: 90%;
-    margin:auto;
-    position: relative;
+const CardContent = styled(StyledContent, cardContentProps)`
+    position: absolute;
     background-size: cover;
     background-image: url(${props => props.posterUrl});
-    transition: all 1.5s;
     `;
 
 export default CardContent;
