@@ -1,7 +1,7 @@
 <template>
   <div class="input-field">
     <form @submit.prevent="searchShow">
-      <Check class="check" type="checkbox" id="search-toggle"/>
+      <input class="check" type="checkbox" id="search-toggle"/>
       <label for="search-toggle">
         <span >
           <font-awesome-icon class="icn" icon="search"  />
@@ -14,15 +14,13 @@
 
 <script>
 import { Input } from './Search';
-import { Check } from "./Collapse";
 import { getData } from "@/services/ApiService";
 import { mapActions, mapState, mapMutations } from "vuex";
 
 export default {
   name: "Search",
   components: {
-      Input,
-      Check
+      Input
   },
   data() {
     return {
@@ -60,16 +58,12 @@ export default {
 
 .check {
   display: none;
-  transition: all .4s;
-}
-
-.check:checked {
-  transform: scaleX(10);
+  transition: all .5s;
 }
 
 .check:checked~.inpt{
   opacity: 1;
-  animation: appear 1s ease-in-out;
+  animation: appear .5s ease-in-out;
 }
 
 

@@ -2,7 +2,7 @@
   <StyledContainer>
     <Row>
         <Column :desktop="3" :tablet="4" :phone="12" v-for="(show, index) in searchedList" :key="index">
-            <Card v-bind:posterUrl="show.Poster" v-bind:title="show.Title"/>
+            <Card v-bind:posterUrl="show.Poster" v-bind:title="show.Title" v-bind:imdbID="show.imdbID"/>
         </Column>
     </Row>
   </StyledContainer>

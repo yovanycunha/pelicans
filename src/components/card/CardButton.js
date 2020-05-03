@@ -13,10 +13,12 @@ const CardButton = styled('button')`
     &:hover {
         transform: translateY(-.3rem);
         box-shadow: 0rem .5rem 1.3rem 0 rgba(0,0,0,.5);
-
-        
     }
 
+    &:active {
+        transform: translateY(-.1rem);
+        box-shadow: 0rem .5rem 1.3rem 0 rgba(0,0,0,.5);
+    }
 `;
 
 export default CardButton;
