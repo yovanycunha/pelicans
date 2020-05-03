@@ -7,12 +7,9 @@ const CardButton = styled('button', btnProps)`
     border: none;
     border-radius: 50%;
     display: inline-block;
-    margin-right: 2.5%;
     z-index: 2;
-
-    :last-child {
-        margin-left:2.5%;
-    }
+    margin-left: 40%;
+    margin-top: 45%;
 
 `;
 

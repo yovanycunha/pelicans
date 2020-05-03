@@ -27,11 +27,7 @@ export default {
   name: "Card",
   props: {
     posterUrl: String,
-    title: String,
-    plot: String,
-    genre: String,
-    year: String,
-    director: String
+    title: String
   },
   components: {
     FrontCard,
@@ -50,15 +46,9 @@ export default {
   position: relative;
 }
 
-.btn-bar {
-  position: relative;
-  bottom: 0;
-  height: 10%;
-  width: 100%;
-}
-
 .btn-bar ul li {
-  display: inline;
+  display: block;
+  margin: auto;
 }
 
 .btn {
@@ -71,7 +61,25 @@ export default {
 }
 
 .card:hover .card-back {
+  animation: moveUp .5s;
   opacity: 1;
+}
+
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20rem);
+  }
+
+  80% {
+    transform: translateY(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 </style>

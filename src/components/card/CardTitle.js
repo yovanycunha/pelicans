@@ -7,7 +7,7 @@ const CardTitle = styled.h4`
     max-width: 90%;
     background-color: inherit;
     height: 10%;
-    margin: auto;
+    margin: 0;
     padding-top: 0.2rem;
 
     white-space:nowrap;
