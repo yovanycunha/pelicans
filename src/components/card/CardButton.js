@@ -1,15 +1,21 @@
 import styled, {keyframes} from 'vue-styled-components';
 
-const btnProps = { primary: Boolean };
-
-const CardButton = styled('button', btnProps)`
+const CardButton = styled('button')`
     text-decoration: none;
-    border: none;
     border-radius: 50%;
-    display: inline-block;
-    z-index: 2;
     margin-left: 40%;
     margin-top: 45%;
+    outline: none;
+    transition: all .1s;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0rem .5rem 1.3rem 0 rgba(0,0,0,.5);
+
+        
+    }
 
 `;
 

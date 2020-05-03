@@ -6,9 +6,9 @@ import axios from 'axios'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faSpinner, faSearch, faReply, faHeart } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faHeart, faListUl } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faSpinner, faSearch, faReply, faHeart)
+library.add(faSearch, faHeart, faListUl)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false;

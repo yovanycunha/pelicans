@@ -6,10 +6,14 @@
       <div class="btn-bar">
         <ul>
           <li>
-            <CardButton class="btn">Butão</CardButton>
+            <CardButton class="btn">
+              <font-awesome-icon icon="heart" />
+            </CardButton>
           </li>
           <li>
-            <CardButton class="btn">Butão</CardButton>
+            <CardButton class="btn">
+              <font-awesome-icon icon="list-ul" />
+            </CardButton>
           </li>
         </ul>
       </div>
@@ -46,22 +50,20 @@ export default {
   position: relative;
 }
 
-.btn-bar ul li {
-  display: block;
-  margin: auto;
-}
 
 .btn {
   width: 7rem;
   height: 7rem;
+  font-size: 3rem;
 }
+
 
 .card:hover .card-front {
   filter: blur(.5rem);
 }
 
 .card:hover .card-back {
-  animation: moveUp .5s;
+  animation: moveUp .5s ease-in-out;
   opacity: 1;
 }
 
@@ -73,7 +75,7 @@ export default {
   }
 
   80% {
-    transform: translateY(-2rem);
+    transform: translateY(-1rem);
   }
 
   100% {
