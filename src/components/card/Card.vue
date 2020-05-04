@@ -26,6 +26,7 @@ import FrontCard from "./CardContent";
 import CardBack from './CardBack';
 import CardButton from "./CardButton";
 import {CardTitle} from './CardTitle';
+import { getShowById } from "@/services/ApiService.js";
 import { mapMutations, mapActions } from 'vuex';
 
 export default {
@@ -45,9 +46,8 @@ export default {
     ...mapMutations(["ADD_TO_FAV"]),
     ...mapActions(["addToFavorites"]),
     addNewFav: function () {
-      {
-        console.log(this.imdbID)
-      }
+      getShowById(this.imdbID)
+        .then(result => this.addToFavorites(result))
     }
   },
 };

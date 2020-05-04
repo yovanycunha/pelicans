@@ -14,7 +14,7 @@
 
 <script>
 import { Input } from './Search';
-import { getData } from "@/services/ApiService";
+import { getShowByTitle } from "@/services/ApiService";
 import { mapActions, mapState, mapMutations } from "vuex";
 
 export default {
@@ -34,7 +34,7 @@ export default {
     ...mapMutations(["SEARCH_LIST"]),
     ...mapActions(["addToSearchedList"]),
     searchShow: function() {
-      getData(this.search).then(result => {
+      getShowByTitle(this.search).then(result => {
         this.addToSearchedList(result);
       });
     }

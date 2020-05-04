@@ -1,14 +1,17 @@
 import axios from 'axios';
 
 
-async function getData(name) {
+async function getShowByTitle(name) {
     return await axios
         .get('&s=' + name)
-        .then((result) => {
-            console.log(result)
-            return result.data.Search
-        })
+        .then(result => {return result.data.Search})
     }
 
+async function getShowById(imdbID) {
+    return await axios
+        .get('&plot=full&i=' + imdbID)
+        .then(result => {return result.data;})
+}
 
-export {getData};
+
+export {getShowByTitle, getShowById};
