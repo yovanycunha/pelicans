@@ -8,7 +8,6 @@ const Input = styled.input`
     height: 3rem;
     outline: none;
     background-color: #ecefff;
-    opacity: 0;
 
     @media only screen and (max-width: 768px) {
         width: 15rem;

@@ -2,12 +2,12 @@
   <div class="input-field">
     <form @submit.prevent="searchShow">
       <input class="check" type="checkbox" id="search-toggle"/>
+      <Input class="inpt" placeholder="Search here ..." v-model="search"/>
       <label for="search-toggle">
         <span >
           <font-awesome-icon class="icn" icon="search"  />
         </span>
       </label>
-      <Input class="inpt" placeholder="Search here ..." v-model="search"/>
     </form>
   </div>
 </template>
@@ -66,7 +66,7 @@ export default {
   animation: appear .5s ease-in-out;
 }
 
-
+/* 
 @keyframes appear {
   0% {
     opacity: 0;
@@ -80,6 +80,6 @@ export default {
     width: 30rem;
   }
 
-}
+} */
 
 </style>
